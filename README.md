@@ -1,5 +1,5 @@
 # Reach Somewhere
-Easily monitor content (scroll) to reach a certain position in vue, react framework.
+Easily monitor content (scroll) to reach a certain position, in vue react framework.
 
 ## 📃 Documentation
 

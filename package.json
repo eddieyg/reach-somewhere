@@ -1,7 +1,7 @@
 {
   "name": "reach-somewhere",
   "version": "0.0.1",
-  "description": "Easily monitor content (scroll) to reach a certain position in vue, react framework.",
+  "description": "Easily monitor content (scroll) to reach a certain position, in vue react framework.",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
