@@ -1,0 +1,40 @@
+{
+  "name": "reach-somewhere",
+  "version": "0.0.1",
+  "description": "Easily monitor content (scroll) to reach a certain position in vue, react framework.",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "build": "tsup",
+    "publish:r": "pnpm publish -r --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eddieyg/reach-somewhere.git"
+  },
+  "keywords": [
+    "vue reach",
+    "react reach",
+    "reach bottom",
+    "reach top",
+    "reach scroll offset"
+  ],
+  "author": "eddieyg",
+  "email": "eddiezhao@foxmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.5",
+    "@types/lodash": "^4.14.195",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.42.0",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4",
+    "vitest": "^0.28.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "vue": "^3.3.4"
+  }
+}
