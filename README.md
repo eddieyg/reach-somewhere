@@ -20,8 +20,6 @@ pnpm add reach-somewhere
 #### Directive
 
 ```typescript
-// enter.ts
-
 import { createApp } from 'vue'
 import { ReachSwDirective } from 'reach-somewhere/vue'
 const app = createApp(App)
