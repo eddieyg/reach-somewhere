@@ -6,13 +6,13 @@ export interface ReachSwDirectiveOptions {
   name?: string
 }
 
-function install(app: App, options?: ReachSwDirectiveOptions) {
+function install(app: any, options?: ReachSwDirectiveOptions) {
   const {
     name = 'reach-sw',
   } = options || {}
   let reachSw: ReachSw | undefined
 
-  app.directive(name, {
+  (app as App).directive(name, {
     mounted(el: HTMLElement, binding) {
       const params: ReachSwParams = binding.value
       if (!params)
