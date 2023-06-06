@@ -1,7 +1,6 @@
 import type { App } from 'vue'
 import type { ReachSwParams } from 'src/type'
-import type { ReachSw } from 'src/core'
-import { createReachSw } from 'src/core'
+import { ReachSw } from 'src/core'
 
 export interface ReachSwDirectiveOptions {
   name?: string
@@ -11,8 +10,7 @@ function install(app: App, options?: ReachSwDirectiveOptions) {
   const {
     name = 'reach-sw',
   } = options || {}
-
-  let reachSw: ReachSw
+  let reachSw: ReachSw | undefined
 
   app.directive(name, {
     mounted(el: HTMLElement, binding) {
@@ -20,13 +18,15 @@ function install(app: App, options?: ReachSwDirectiveOptions) {
       if (!params)
         return
 
-      reachSw = createReachSw(el, params)
+      reachSw = new ReachSw(el, params)
       reachSw.listen()
     },
 
     unmounted() {
-      if (reachSw)
+      if (reachSw) {
         reachSw.rmListen()
+        reachSw = undefined
+      }
     },
   })
 }
