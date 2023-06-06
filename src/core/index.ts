@@ -85,10 +85,14 @@ function parsePosition(position: string) {
     type: '' as PositionType,
     value: 0,
   }
-  if (/^.*px$/.test(positionArr[1]))
+  if (/^.*px$/.test(positionArr[1])) {
     offset.type = 'pixel'
-  else if (/^.*%$/.test(positionArr[1]))
+    offset.value = Number(positionArr[1].replace('px', ''))
+  }
+  else if (/^.*%$/.test(positionArr[1])) {
     offset.type = 'percent'
+    offset.value = Number(positionArr[1].replace('%', ''))
+  }
   return {
     direction,
     offset,
